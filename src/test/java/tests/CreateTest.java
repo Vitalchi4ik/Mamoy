@@ -16,7 +16,7 @@ public class CreateTest extends BaseTest {
     public void checkFunctionalBooking(String name, String phone) throws Exception {
         actions.fillTheBookingForm(name, phone);
         editData = EditData.generateTextAlertMessage();
-        Assert.assertEquals("Test fail, because function \"Booking\" has'nt realised yet",
+        Assert.assertNotEquals("Test fail, because function \"Booking\" has'nt realised yet",
                 actions.getAllertTextMessage(), editData.getAlertMessage());
     }
 
